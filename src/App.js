@@ -1,6 +1,6 @@
-import Main from "./components/step/main";
 import Header from "./components/header/Header";
-import Cart from "./components/cart/Cart";
+import Main from "./components/main";
+import Footer from "./components/footer/Footer";
 import "./style/main.scss"
 import "./style/base.scss"
 import "./style/reset.scss"
@@ -11,6 +11,7 @@ function App() {
     <>
       <Header />
       <Main />
+      <Footer />
     </>
   );
 }
