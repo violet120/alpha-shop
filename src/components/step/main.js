@@ -6,10 +6,14 @@ import ProgressControl from "./ProgressControl"
 
 export default function Main() {
   return (
-    <main>
-      <StepProgress />
-      <Step1 />
-      <ProgressControl />
+    <main className="site-main">
+      <div className="main-container">
+        <section className="register-container col col-lg-6 col-sm-12" data-phase="1" data-total-price="0">
+          <StepProgress />
+          <Step1 />
+        </section>
+        <ProgressControl />
+      </div>
     </main>
   )
 }

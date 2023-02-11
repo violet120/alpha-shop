@@ -3,8 +3,7 @@ import { ReactComponent as Complete } from "../../style/icons/pg-complete.svg"
 export default function StepProgress() {
   return (
     <>
-      <h2>結帳</h2>
-
+      <h2 className="register-title col col-12">結帳</h2>
       <section className="progress-container col col-12">
         <span className="progress-group" data-phase="address">
           <span className="progress-icon">
@@ -19,9 +18,9 @@ export default function StepProgress() {
         <span className="progress-group" data-phase="shipping">
           <span className="progress-icon">
             <span className="text">2</span>
-            <svg className="icon cursor-point">
+            {/* <svg className="icon cursor-point">
               <Complete />
-            </svg>
+            </svg> */}
           </span>
           <span className="progress-label">運送方式</span>
         </span>
@@ -29,9 +28,9 @@ export default function StepProgress() {
         <span className="progress-group" data-phase="credit-card">
           <span className="progress-icon">
             <span className="text">3</span>
-            <svg className="icon cursor-point">
+            {/* <svg className="icon cursor-point">
               <Complete />
-            </svg>
+            </svg> */}
           </span>
           <span className="progress-label">付款資訊</span>
         </span>
