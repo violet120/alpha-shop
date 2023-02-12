@@ -1,4 +1,4 @@
-import { ReactComponent as Complete } from "../../style/icons/pg-complete.svg"
+import { ReactComponent as Complete } from "../../assets/icons/pg-complete.svg"
 
 export default function StepProgress() {
   return (

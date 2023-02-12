@@ -1,8 +1,8 @@
-import { ReactComponent as RightArrow } from "../../style/icons/right-arrow.svg"
-import { ReactComponent as LeftArrow } from "../../style/icons/left-arrow.svg"
+import { ReactComponent as RightArrow } from "../../assets/icons/right-arrow.svg"
+import { ReactComponent as LeftArrow } from "../../assets/icons/left-arrow.svg"
 
 // 換頁 component
-export function FirstPage() {
+function FirstPage() {
   return (
     <section className="button-group col col-12" data-phase="address">
       <button className="next">
@@ -15,7 +15,7 @@ export function FirstPage() {
   )
 }
 
-export function NextPage() {
+function NextPage() {
   return (
     <section className="button-group col col-12" data-phase="shipping">
       <button className="prev">
@@ -34,7 +34,7 @@ export function NextPage() {
   )
 }
 
-export function EndPage() {
+function EndPage() {
   return (
     <section className="button-group col col-12" data-phase="credit-card">
       <button className="prev">

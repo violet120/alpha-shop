@@ -1,5 +1,5 @@
-import { SelectTitle } from "./Database.js"
-import { County } from "./Database.js"
+import { SelectTitle } from "./Database.jsx"
+import { County } from "./Database.jsx"
 
 export default function Step1() {
   return (

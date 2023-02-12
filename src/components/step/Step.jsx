@@ -1,7 +1,7 @@
-import StepProgress from "./step/StepProgress"
-import Step1 from "./step/Step1"
-import ProgressControl from "./step/ProgressControl"
-import Cart from "./cart/Cart"
+import StepProgress from "./StepProgress"
+import Step1 from "./Step1"
+import ProgressControl from "./ProgressControl"
+import Cart from "../Cart/Cart"
 
 export default function Main() {
   return (
