@@ -2,7 +2,7 @@ import { ReactComponent as RightArrow } from "../../assets/icons/right-arrow.svg
 import { ReactComponent as LeftArrow } from "../../assets/icons/left-arrow.svg"
 
 // 換頁 component
-function FirstPage() {
+const FirstPage = () => {
   return (
     <section className="button-group col col-12" data-phase="address">
       <button className="next">
@@ -15,7 +15,7 @@ function FirstPage() {
   )
 }
 
-function NextPage() {
+const NextPage = () => {
   return (
     <section className="button-group col col-12" data-phase="shipping">
       <button className="prev">
@@ -34,7 +34,7 @@ function NextPage() {
   )
 }
 
-function EndPage() {
+const EndPage = () => {
   return (
     <section className="button-group col col-12" data-phase="credit-card">
       <button className="prev">

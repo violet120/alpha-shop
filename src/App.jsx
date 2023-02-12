@@ -4,7 +4,7 @@ import Footer from "./components/Footer/Footer";
 import "./style/main.scss"
 import "./style/base.scss"
 import "./style/reset.scss"
-import "./style/register.scss"
+import "./components/Step/Step.scss"
 
 function App() {
   return (

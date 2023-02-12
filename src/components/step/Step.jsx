@@ -3,7 +3,7 @@ import Step1 from "./Step1"
 import ProgressControl from "./ProgressControl"
 import Cart from "../Cart/Cart"
 
-export default function Main() {
+export default function Step() {
   return (
     <main className="site-main">
       <div className="main-container">
