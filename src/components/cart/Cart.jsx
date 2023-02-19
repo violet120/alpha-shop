@@ -34,13 +34,15 @@ export default function Cart() {
             <div className="product-info">
               <div className="product-name">{data.name}</div>
               <div className="product-control-container">
-                <span className="product-action minus">
-                  <Minus />
-                </span>
-                <span className="product-count">{data.quantity}</span>
-                <span className="product-action plus">
-                  <Plus />
-                </span>
+                <div className="product-control">
+                  <svg className="product-action minus">
+                    <Minus />
+                  </svg>
+                  <span className="product-count">{data.quantity}</span>
+                  <svg className="product-action plus">
+                    <Plus />
+                  </svg>
+                </div>
               </div>
               <div className="price">${data.price}</div>
             </div>
