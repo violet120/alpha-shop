@@ -24,22 +24,21 @@ const cartData = [
 export default function Cart() {
   const [count, setCount] = useState(cartData)
   const totall = 
-  count.map(data => data.price)
-  .reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-  })
+  [...count].reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.price * currentValue.quantity
+  }, 0)
   function handleClickButton(id, get) {
     const updateCartData = count.map((data) => {
       if (data.id === id) {
         if (get === "minus" && data.quantity > 1) {
           return {
             ...data,
-            quantity: data.quantity - 1,
+            quantity: data.quantity - 1
           }
         } else if (get === "plus") {
           return {
             ...data,
-            quantity: data.quantity + 1,
+            quantity: data.quantity + 1
           }
         }
       }
