@@ -1,3 +1,11 @@
+import { ReactComponent as Toggle } from "../../assets/icons/toggle.svg"
+import { ReactComponent as Search } from "../../assets/icons/search.svg"
+import { ReactComponent as Cart } from "../../assets/icons/cart.svg"
+import { ReactComponent as Moon } from "../../assets/icons/moon.svg"
+import { ReactComponent as Sun } from "../../assets/icons/sun.svg"
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg"
+
+
 export default function Header() {
   return (
     <header className="site-header">
@@ -5,9 +13,7 @@ export default function Header() {
         {/* <!-- navbar-toggle --> */}
         <input id="navbar-toggle" class="navbar-toggle" type="checkbox" />
         <label for="navbar-toggle" class="burger-container">
-          {/* <svg class="icon-toggle cursor-point">
-            <use xlink:href="#svg-icon-toggle"></use>
-          </svg> */}
+          <Toggle className="icon-toggle cursor-point" />
         </label>
 
         {/* <!-- navbar-menu --> */}
@@ -32,34 +38,24 @@ export default function Header() {
           <ul className="nav-list site-action-list">
             {/* <!-- search --> */}
             <li className="nav-item">
-              {/* <svg class="nav-icon cursor-point">
-                <use xlink:href="#svg-icon-search"></use>
-              </svg> */}
+              <Search className="nav-icon cursor-point" />
             </li>
             {/* <!-- cart --> */}
             <li className="nav-item">
-              {/* <svg class="nav-icon cursor-point">
-                <use xlink:href="#svg-icon-cart"></use>
-              </svg> */}
+              <Cart className="nav-icon cursor-point" />
             </li>
             <li id="theme-toggle" class="nav-item">
               {/* <!-- moon --> */}
-              {/* <svg class="nav-icon cursor-point">
-                <use xlink:href="#svg-icon-moon"></use>
-              </svg> */}
+              {/* <Moon className="nav-icon cursor-point" /> */}
               {/* <!-- sun --> */}
-              {/* <svg class="nav-icon cursor-point">
-                <use xlink:href="#svg-icon-sun"></use>
-              </svg> */}
+              <Sun className="nav-icon cursor-point" />
             </li>
           </ul>
         </nav>
 
         {/* <!-- logo --> */}
         <a className="header-logo-container" href="#">
-          {/* <svg class="icon-logo cursor-point">
-            <use xlink:href="#svg-icon-logo"></use>
-          </svg> */}
+          <Logo className="icon-logo cursor-point" />
         </a>
       </div>
     </header>

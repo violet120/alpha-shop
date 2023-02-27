@@ -1,11 +1,14 @@
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg"
+import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg"
+import { ReactComponent as Instagram } from "../../assets/icons/instagram.svg"
+import { ReactComponent as Whatsapp } from "../../assets/icons/whatsapp.svg"
+
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-logo-container">
-          {/* <svg className="icon-logo">
-            <use xlink:href="#svg-icon-logo"></use>
-          </svg> */}
+          <Logo className="icon-logo" />
         </div>
         <section className="footer-section">
           <h2 className="section-title">客戶服務</h2>
@@ -37,15 +40,9 @@ export default function Footer() {
           <div className="section-content">
             <div className="tel-info">+886 02123-45678</div>
             <div className="social-icon-group">
-              {/* <svg className="social-icon cursor-point">
-                <use xlink:href="#svg-icon-facebook"></use>
-              </svg>
-              <svg className="social-icon cursor-point">
-                <use xlink:href="#svg-icon-instagram"></use>
-              </svg>
-              <svg className="social-icon cursor-point">
-                <use xlink:href="#svg-icon-whatsapp"></use>
-              </svg> */}
+              <Facebook className="social-icon cursor-point" />
+              <Instagram className="social-icon cursor-point" />
+              <Whatsapp className="social-icon cursor-point" />
             </div>
           </div>
         </section>
