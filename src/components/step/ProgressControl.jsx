@@ -1,59 +1,20 @@
 import { ReactComponent as RightArrow } from "../../assets/icons/right-arrow.svg"
 import { ReactComponent as LeftArrow } from "../../assets/icons/left-arrow.svg"
 
-// 換頁 component
-const FirstPage = () => {
-  return (
-    <section className="button-group col col-12" data-phase="address">
-      <button className="next">
-        下一步
-        <svg className="cursor-point">
-          <RightArrow />
-        </svg>
-      </button>
-    </section>
-  )
-}
-
-const NextPage = () => {
-  return (
-    <section className="button-group col col-12" data-phase="shipping">
-      <button className="prev">
-        <svg className="cursor-point">
-          <LeftArrow />
-        </svg>
-        上一步
-      </button>
-      <button className="next">
-        下一步
-        <svg className="cursor-point">
-          <RightArrow />
-        </svg>
-      </button>
-    </section>
-  )
-}
-
-const EndPage = () => {
-  return (
-    <section className="button-group col col-12" data-phase="credit-card">
-      <button className="prev">
-        <svg className="cursor-point">
-          <LeftArrow />
-        </svg>
-        上一步
-      </button>
-      <button className="next">
-        確認下單
-      </button>
-    </section>
-  )
-}
-
-export default function ProgressControl() {
+export default function ProgressControl({ onStepNumber, onBackButton, onNextButton }) {
   return (
     <section className="progress-control-container col col-lg-6 col-sm-12">
-      <FirstPage />
+      <section className="button-group col col-12" data-phase={onStepNumber}>
+        {onStepNumber !== 1 && (
+          <button className="prev cursor-point" onClick={() => onBackButton(onStepNumber)}>
+            <LeftArrow />
+            上一步
+          </button>
+        )}
+        <button className="next cursor-point" onClick={() => onNextButton(onStepNumber)}>
+          {onStepNumber === 3 ? "確認下單" : (<>下一步< RightArrow /></>) }
+        </button>
     </section>
+    </section >
   )
 }

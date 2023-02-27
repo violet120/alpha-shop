@@ -8,9 +8,7 @@ export default function StepProgress() {
         <span className="progress-group" data-phase="address">
           <span className="progress-icon">
             <span className="text">1</span>
-            <svg className="icon cursor-point">
-              <Complete />
-            </svg>
+            <Complete className="icon cursor-point" />
           </span>
           <span className="progress-label">寄送地址</span>
         </span>
@@ -18,9 +16,7 @@ export default function StepProgress() {
         <span className="progress-group" data-phase="shipping">
           <span className="progress-icon">
             <span className="text">2</span>
-            {/* <svg className="icon cursor-point">
-              <Complete />
-            </svg> */}
+            <Complete className="icon cursor-point" />
           </span>
           <span className="progress-label">運送方式</span>
         </span>
@@ -28,9 +24,7 @@ export default function StepProgress() {
         <span className="progress-group" data-phase="credit-card">
           <span className="progress-icon">
             <span className="text">3</span>
-            {/* <svg className="icon cursor-point">
-              <Complete />
-            </svg> */}
+            <Complete className="icon cursor-point" />
           </span>
           <span className="progress-label">付款資訊</span>
         </span>
