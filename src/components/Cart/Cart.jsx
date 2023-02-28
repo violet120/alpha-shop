@@ -49,7 +49,7 @@ export default function Cart() {
   }
   return (
     <section className="cart-container col col-lg-5 col-sm-12">
-      <h3 class="cart-title">購物籃</h3>
+      <h3 className="cart-title">購物籃</h3>
       <section className="product-list col col-12" data-total-price="0">
         {count.map(data => 
           <div 

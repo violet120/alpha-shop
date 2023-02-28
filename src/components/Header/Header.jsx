@@ -11,8 +11,8 @@ export default function Header() {
     <header className="site-header">
       <div className="header-container mx-auto">
         {/* <!-- navbar-toggle --> */}
-        <input id="navbar-toggle" class="navbar-toggle" type="checkbox" />
-        <label for="navbar-toggle" class="burger-container">
+        <input id="navbar-toggle" className="navbar-toggle" type="checkbox" />
+        <label for="navbar-toggle" className="burger-container">
           <Toggle className="icon-toggle cursor-point" />
         </label>
 
