@@ -1,7 +1,22 @@
 import { ReactComponent as RightArrow } from "../../assets/icons/right-arrow.svg"
 import { ReactComponent as LeftArrow } from "../../assets/icons/left-arrow.svg"
+import { useContext } from "react"
+import { PaymentContext } from "../Context/PaymentContext"
 
-export default function ProgressControl({ onStepNumber, onBackButton, onNextButton }) {
+export default function ProgressControl({ 
+  onStepNumber, 
+  onBackButton, 
+  onNextButton, 
+}) {
+  const outputPaymentData = useContext(PaymentContext)
+
+  function handlePaymentData() {
+    console.log(`持卡人姓名：${outputPaymentData[0].userName}`)
+    console.log(`卡號：${outputPaymentData[0].cardNumber}`)
+    console.log(`有效期限：${outputPaymentData[0].validityPeriod}`)
+    console.log(`CVC/CCV：${outputPaymentData[0].CVC}`)
+  }
+
   return (
     <section className="progress-control-container col col-lg-6 col-sm-12">
       <section className="button-group col col-12" data-phase={onStepNumber}>
@@ -11,9 +26,19 @@ export default function ProgressControl({ onStepNumber, onBackButton, onNextButt
             上一步
           </button>
         )}
-        <button className="next cursor-point" onClick={() => onNextButton(onStepNumber)}>
-          {onStepNumber === 3 ? "確認下單" : (<>下一步< RightArrow /></>) }
-        </button>
+        {onStepNumber !== 3 && (
+          <button className="next cursor-point" onClick={() => onNextButton(onStepNumber)}>
+            下一步
+            < RightArrow />
+          </button>
+        )}
+        {onStepNumber === 3 && (
+          <button className="next cursor-point" onClick={handlePaymentData}>
+            確認下單
+            < RightArrow />
+          </button>
+        )}
+        
     </section>
     </section >
   )
