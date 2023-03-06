@@ -1,6 +1,6 @@
 import { createContext } from 'react'
-import imgOne from "../../assets/images/product-1.jpg"
-import imgTwo from "../../assets/images/product-2.jpg"
+import imgOne from "assets/images/product-1.jpg"
+import imgTwo from "assets/images/product-2.jpg"
 
 export const cartData = [
   {
