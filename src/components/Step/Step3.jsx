@@ -1,6 +1,5 @@
 import { useContext } from "react"
-// import { validate } from "webpack";
-import { PaymentContext } from "../Context/PaymentContext"
+import { PaymentContext } from "context/PaymentContext"
 
 export default function Step3() {
   const [paymentData, setPaymentData] = useContext(PaymentContext)

@@ -1,12 +1,12 @@
-import StepProgress from "./StepProgress"
-import Step1 from "./Step1"
-import Step2 from "./Step2"
-import Step3 from "./Step3"
-import ProgressControl from "./ProgressControl"
-import Cart from "../Cart/Cart"
+import StepProgress from "components/Step/StepProgress"
+import Step1 from "components/Step/Step1"
+import Step2 from "components/Step/Step2"
+import Step3 from "components/Step/Step3"
+import ProgressControl from "components/Step/ProgressControl"
+import Cart from "components/Cart/Cart"
 import { useState } from "react"
-import { CartContext, cartData } from "../Context/CartContext"
-import { PaymentContext, payment } from "../Context/PaymentContext"
+import { CartContext, cartData } from "context/CartContext"
+import { PaymentContext, payment } from "context/PaymentContext"
 
 export default function Step() {
   const [currentCart, setCurrentCart] = useState(cartData)

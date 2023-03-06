@@ -1,9 +1,9 @@
-import { ReactComponent as Toggle } from "../../assets/icons/toggle.svg"
-import { ReactComponent as Search } from "../../assets/icons/search.svg"
-import { ReactComponent as Cart } from "../../assets/icons/cart.svg"
-import { ReactComponent as Moon } from "../../assets/icons/moon.svg"
-import { ReactComponent as Sun } from "../../assets/icons/sun.svg"
-import { ReactComponent as Logo } from "../../assets/icons/logo.svg"
+import { ReactComponent as Toggle } from "assets/icons/toggle.svg"
+import { ReactComponent as Search } from "assets/icons/search.svg"
+import { ReactComponent as Cart } from "assets/icons/cart.svg"
+import { ReactComponent as Moon } from "assets/icons/moon.svg"
+import { ReactComponent as Sun } from "assets/icons/sun.svg"
+import { ReactComponent as Logo } from "assets/icons/logo.svg"
 
 
 export default function Header() {
@@ -44,7 +44,7 @@ export default function Header() {
             <li className="nav-item">
               <Cart className="nav-icon cursor-point" />
             </li>
-            <li id="theme-toggle" class="nav-item">
+            <li id="theme-toggle" className="nav-item">
               {/* <!-- moon --> */}
               {/* <Moon className="nav-icon cursor-point" /> */}
               {/* <!-- sun --> */}
