@@ -1,5 +1,4 @@
-import { SelectTitle } from "./Database.jsx"
-import { County } from "./Database.jsx"
+import { SelectTitle, County } from "components/Step/Database.jsx"
 
 export default function Step1() {
   return (
@@ -10,7 +9,13 @@ export default function Step1() {
           <div className="input-group input-w-lg-2 input-w-sm-s1">
             <div className="input-label">稱謂</div>
             <div className="select-container">
-              <SelectTitle />
+              <select>
+                {SelectTitle.map(option => {
+                  return (
+                    <option key={option.value} value={option.value}>{option.gender}</option>
+                  )
+                })}
+              </select>
             </div>
           </div>
           <div className="input-group input-w-lg-4 input-w-sm-s2">
@@ -32,7 +37,13 @@ export default function Step1() {
           <div className="input-group input-w-lg-2 input-w-sm-full">
             <div className="input-label">縣市</div>
             <div className="select-container">
-              <County />
+              <select required>
+                {County.map(option => {
+                  return (
+                    <option key={option.city} value={option.value}>{option.city}</option>
+                  )
+                })}
+              </select>
             </div>
           </div>
           <div className="input-group input-w-lg-4 input-w-sm-full">

@@ -1,21 +1,23 @@
-import { ReactComponent as RightArrow } from "../../assets/icons/right-arrow.svg"
-import { ReactComponent as LeftArrow } from "../../assets/icons/left-arrow.svg"
+import { ReactComponent as RightArrow } from "assets/icons/right-arrow.svg"
+import { ReactComponent as LeftArrow } from "assets/icons/left-arrow.svg"
 import { useContext } from "react"
-import { PaymentContext } from "../Context/PaymentContext"
-import { CartContext } from "../Context/CartContext"
+import { PaymentContext } from "context/PaymentContext"
+import { CartContext } from "context/CartContext"
 
-export default function ProgressControl({ 
-  onStepNumber, 
-  onBackButton, 
-  onNextButton, 
+export default function ProgressControl({
+  onStepNumber,
+  onBackButton,
+  onNextButton,
 }) {
   const outputPaymentData = useContext(PaymentContext)
   const [currentCart, setCurrentCart] = useContext(CartContext)
   // 計算總金額
   const totallPrice =
-    [...currentCart].reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.price * currentValue.quantity
-    }, 0)
+    Intl.NumberFormat('en-US').format(
+      [...currentCart].reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.price * currentValue.quantity
+      }, 0)
+    )
 
   function handlePaymentData() {
     console.log(`持卡人姓名：${outputPaymentData[0].userName}`)
@@ -46,8 +48,7 @@ export default function ProgressControl({
             < RightArrow />
           </button>
         )}
-        
-    </section>
+      </section>
     </section >
   )
 }
