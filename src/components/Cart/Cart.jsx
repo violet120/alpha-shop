@@ -1,7 +1,7 @@
-import { ReactComponent as Minus } from "../../assets/icons/minus.svg"
-import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
+import { ReactComponent as Minus } from "assets/icons/minus.svg"
+import { ReactComponent as Plus } from "assets/icons/plus.svg"
 import { useContext } from "react"
-import { CartContext } from "../Context/CartContext"
+import { CartContext } from "context/CartContext"
 
 
 export default function Cart() {
@@ -9,9 +9,12 @@ export default function Cart() {
   const [currentCart, setCurrentCart] = useContext(CartContext)
   // 計算總金額
   const totall =
-    [...currentCart].reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.price * currentValue.quantity
-    }, 0)
+    Intl.NumberFormat('en-US').format(
+      [...currentCart].reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.price * currentValue.quantity
+      }, 0)
+    )
+    
   function handleClickButton(id, get) {
     const updateCartData = currentCart.map((data) => {
       if (data.id === id) {
@@ -54,7 +57,7 @@ export default function Cart() {
                   <Plus className="product-action plus" onClick={() => handleClickButton(data.id, "plus")} />
                 </div>
               </div>
-              <div className="price">${data.price * data.quantity}</div>
+              <div className="price">${data.price}</div>
             </div>
           </div>
         )}
